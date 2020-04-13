@@ -1,0 +1,48 @@
+{
+  "name": "Interop Peer connection WebRTC Test %ts",
+  "grids": [
+    {
+      "type": "local",
+      "url": "http://192.168.1.133:4444/wd/hub"
+    }
+  ],
+  "tests": [
+    {
+      "name": "Peer Connection Test %ts",
+      "description": "Peer Connection WebRTC Test",
+      "tupleSize": 2,
+      "testImpl": "io.cosmosoftware.kite.peerconnection.tests.PeerConnectionTest",
+      "payload": {
+        "url": "192.168.1.133",
+        "getStats" : {
+          "enabled": true,
+          "statsCollectionTime": 2,
+          "statsCollectionInterval": 1,
+          "peerConnections": [
+          ],
+          "selectedStats" : ["inbound-rtp", "outbound-rtp", "track", "codec"]
+        }
+      }
+    }
+  ],
+  "clients": [
+{
+      "browserName": "app",
+      "platform": "WINDOWS",
+      "deviceName": "WINDOWS",
+      "app": {
+        "appName": "C:\\Appium\\peerconnection\\peerconnection_client.exe",
+        "appWorkingDir": "C:\\Appium\\peerconnection\\"
+      }
+},
+{
+      "browserName": "app",
+      "platform": "WINDOWS",
+      "deviceName": "WINDOWS",
+      "app": {
+        "appName": "C:\\Appium\\peerconnection\\peerconnection_client.exe",
+        "appWorkingDir": "C:\\Appium\\peerconnection\\"
+      }
+}
+  ]
+}
