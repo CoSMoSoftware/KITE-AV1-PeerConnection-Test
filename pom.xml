@@ -2,19 +2,35 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>peerconnection-test</artifactId>
-
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>kite-peerconnection-test</artifactId>
+  <groupId>io.cosmosoftware.kite</groupId>
+  <version>0.0.1</version>
+  <name>kite-peerconnection-test</name>
 
   <build>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>${kite.java.version}</source>
-          <target>${kite.java.version}</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
         <groupId>org.apache.maven.plugins</groupId>
-        <version>${kite.test.mvn.compiler.version}</version>
+        <version>3.6.1</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+            </manifest>
+          </archive>
+        </configuration>
       </plugin>
     </plugins>
   </build>
@@ -22,23 +38,20 @@
   <dependencies>
     <dependency>
       <artifactId>kite-extras</artifactId>
-      <groupId>${kite.extras.repo}</groupId>
-      <version>${kite.extras.version}</version>
+      <groupId>com.github.CoSMoSoftware</groupId>
+      <version>[0.1.63,)</version>
     </dependency>
     <dependency>
       <artifactId>kite-framework</artifactId>
       <groupId>org.webrtc.kite</groupId>
-      <version>${kite.framework.version}</version>
+      <version>[1.0.13,)</version>
     </dependency>
   </dependencies>
-  <modelVersion>4.0.0</modelVersion>
-  <name>peerconnection-test</name>
 
-  <parent>
-    <artifactId>kite-private-tests</artifactId>
-    <groupId>io.cosmosoftware.kite</groupId>
-    <version>2.0.2</version>
-  </parent>
-  <version>0.0.1</version>
-
+  <repositories>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
 </project>
