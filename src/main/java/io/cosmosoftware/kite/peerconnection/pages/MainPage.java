@@ -38,7 +38,6 @@ public class MainPage extends Page {
     public void joinRoom() throws  KiteInteractionException {
         ((RemoteWebDriver) this.webDriver).getMouse().doubleClick(((RemoteWebElement) (getElement(PageElements.MAIN_PAGE_PARTICIPANT_BTN))).getCoordinates());
         waitAround(ONE_SECOND_INTERVAL);
-        logger.info("WINDOW HANDLE" + windowHandle);
         this.webDriver.switchTo().window(windowHandle);
     }
 
