@@ -11,6 +11,10 @@
       "name": "Peer Connection Test",
       "description": "Peer Connection WebRTC Test",
       "tupleSize": 2,
+      "callbackUrl": "kdash.av1.cosmosoftware.io",
+      "callbackPort": 2221,
+      "callbackUsername" : "cosmouser",
+      "callbackPassword": "CSmu1;'_",
       "testImpl": "io.cosmosoftware.kite.peerconnection.tests.PeerConnectionTest",
       "payload": {
         "url": "192.168.1.1",
