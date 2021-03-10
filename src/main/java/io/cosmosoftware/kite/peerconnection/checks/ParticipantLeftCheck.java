@@ -27,6 +27,7 @@ public class ParticipantLeftCheck extends TestStep {
     protected void step() throws KiteTestException {
         mainPage.changeWindow();
         for (int elapsed = 0; elapsed < DEFAULT_TIMEOUT; elapsed += ONE_SECOND_INTERVAL) {
+            waitAround(ONE_SECOND_INTERVAL);
             logger.info("PARTICIPANT NB: " + coordinator.getParticipantSize());
             if (coordinator.getParticipantSize() == 1) {
                 this.mainPage.isOnParticipantList();

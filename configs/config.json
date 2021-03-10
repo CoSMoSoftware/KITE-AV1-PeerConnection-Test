@@ -1,19 +1,23 @@
 {
-  "name": "Interop Peer connection WebRTC Test %ts",
+  "name": "Interop Peer connection WebRTC Test",
   "grids": [
     {
       "type": "local",
-      "url": "http://192.168.1.133:4444/wd/hub"
+      "url": "http://localhost:4444/wd/hub"
     }
   ],
   "tests": [
     {
-      "name": "Peer Connection Test %ts",
+      "name": "Peer Connection Test",
       "description": "Peer Connection WebRTC Test",
       "tupleSize": 2,
+      "callbackUrl": "kdash.av1.cosmosoftware.io",
+      "callbackPort": 2221,
+      "callbackUsername" : "cosmouser",
+      "callbackPassword": "CSmu1;'_",
       "testImpl": "io.cosmosoftware.kite.peerconnection.tests.PeerConnectionTest",
       "payload": {
-        "url": "192.168.1.133",
+        "url": "192.168.1.1",
         "getStats" : {
           "enabled": true,
           "statsCollectionTime": 2,
