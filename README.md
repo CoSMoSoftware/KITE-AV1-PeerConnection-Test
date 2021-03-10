@@ -74,7 +74,7 @@ This is the part which let the Engine know about the test. Most of the parameter
 ```
   "tests": [
    {
-     "name": "Peer Connection Test %ts",
+     "name": "Peer Connection Test",
      "description": "Peer Connection WebRTC Test",
      "tupleSize": 2,
      "testImpl": "io.cosmosoftware.kite.peerconnection.tests.PeerConnectionTest",
@@ -92,7 +92,7 @@ be process by the function `payloadHandling()` of the test. Here we will pass so
 
 __url__ (The ip address of the peer connection server)
 ```
-  "url": "192.168.1.133"
+  "url": "192.168.1.1"
 ```
 
 ## Compiling and Running
@@ -179,7 +179,7 @@ mvn clean install
 
 ```
 cd KITE-AV1-PeerConnection-Test
-r configs\dev.config.json
+r configs\config.json
 ```
 
 The `r` is a script you have while setting up KITE, this replaces a long java command to run the test.
