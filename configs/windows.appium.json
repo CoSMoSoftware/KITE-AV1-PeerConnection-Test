@@ -1,0 +1,25 @@
+{
+  "capabilities": [
+    {
+      "browserName": "app",
+      "app": "C:\\Appium\\peerconnection\\peerconnection_client_av1.exe",
+      "appWorkingDir": "C:\\Appium\\peerconnection\\",
+      "deviceName": "WINDOWS",
+      "maxInstances": 1,
+      "platform": "WINDOWS"
+    }
+  ],
+  "configuration": {
+    "cleanUpCycle": 2000,
+    "timeout": 60000,
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+    "url": "http://192.168.1.133:4444/wd/hub", -> SELENIUM HUB URL
+    "maxSession": 1,
+    "port": "4728",
+    "host": "192.168.1.133", -> NODE IP
+    "register": true,
+    "registerCycle": 5000,
+    "hubPort": "4444",
+    "hubHost": "192.168.1.133" -> SELENIUM HUB IP
+  }
+}
